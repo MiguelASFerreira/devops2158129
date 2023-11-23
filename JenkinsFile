@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('Build TADS') { 
             steps {
-                echo "Teste"
+                sh '''
+                    docker info
+                    docker compose version
+                    java --version
+                '''
             }
         }
         
